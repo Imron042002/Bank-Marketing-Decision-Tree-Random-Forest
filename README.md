@@ -9,25 +9,33 @@ This project applies machine learning techniques to a classification problem, fo
 ---
 ## Data Source Bank Marketing Dataset
 
-* From :kaggle:Кравчук Анна
-* About:To predict customer response to subscription offers for term deposit products*
+* From :http://archive.ics.uci.edu/ml/datasets/Bank+Marketing#  Kaggle: https://www.kaggle.com/datasets/henriqueyamahata/bank-marketing/data
+* About:To predict customer response to subscription offers for term deposit products
 * Record Count :  45211rows × 21 columns
 
 ---
 
-## 1.  Business Understanding
+##   Business Understanding
 
 * **Objective**: To build a predictive model that classifies instances into one of two categories (`yes` or `no`), aiming to support decision-making processes in a business context.
 * **Success Criteria**: High classification accuracy and meaningful model interpretation (e.g., via decision trees).
 
 ---
 
-## 2.  Data Understanding
+##   Data Understanding
 
-* **Dataset Summary**:
+* **Dataset**:
 
-  * The dataset is imported and previewed using `head()`.
-  * Feature distribution and correlation are explored.
+The dataset (bank.csv) contains information about bank clients, such as:
+
+* Age, job, marital status, education
+
+* Balance, duration of call, number of contacts
+
+* Previous outcomes and more
+
+* Target variable: y → Indicates if the client subscribed to the product (yes or no)
+
 * **Key Steps**:
 
   * Use of `pandas` and `matplotlib` for exploration.
@@ -35,7 +43,7 @@ This project applies machine learning techniques to a classification problem, fo
 
 ---
 
-## 3.  Data Preparation
+##   Data Preparation
 
 * **Missing Values**: Checked and removed using `dropna()`.
 * **Encoding**:
@@ -47,7 +55,7 @@ This project applies machine learning techniques to a classification problem, fo
 
 ---
 
-## 4.  Modeling
+##   Modeling
 
 * **Model Used**: Decision Tree Classifier (`DecisionTreeClassifier` from `sklearn`).
 * **Parameters**: Default or specified manually (e.g., `max_depth`, `criterion`).
@@ -57,7 +65,7 @@ This project applies machine learning techniques to a classification problem, fo
 
 ---
 
-## 5.  Evaluation
+##   Evaluation
 
 * **Metrics Used**:
 
@@ -73,7 +81,7 @@ This project applies machine learning techniques to a classification problem, fo
 
 ---
 
-## 6.  Deployment (Optional/Future Scope)
+##   Deployment (Optional/Future Scope)
 
 * This project does not include deployment yet.
 * For production, consider:
@@ -93,36 +101,45 @@ This project applies machine learning techniques to a classification problem, fo
 * `scikit-learn`
 
 ---
+![alt text](<Screenshot 2025-07-20 165707.png>)
 
-##  File Structure
+# Example Results from the Project
+* **From the ML.ipynb file**:
 
-```
-ML.ipynb          # Jupyter Notebook with full CRISP-DM process
-README.md         # Project overview and methodology (this file)
-```
+* Decision Tree:
+
+Accuracy ≈ 0.87
+
+Easy to understand (visualized with plot_tree)
+
+May overfit the training data
+
+* Random Forest:
+
+Accuracy ≈ 0.90+
+
+More stable predictions
+
+Better generalization and overfitting control
+
+Requires more time and computational resources
+
+* **Summary**:
+![alt text](<Screenshot 2025-07-20 170017.png>)
+
+---
+# Why Does the Decision Tree Only Use age and duration
+
+* duration and age are used because they split the data most effectively at the top levels.
+
+* Other features may be used deeper in the tree or might simply offer less predictive value.
+
+* The default tree plot only shows the upper layers; not all features are visible.
+
 
 ---
 
-##  How to Run
-
-1. Clone or download this repository.
-2. Install required packages:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Open and run the notebook:
-
-   ```bash
-   jupyter notebook ML.ipynb
-   ```
 
 ---
 
-##  Notes
-
-* Make sure the dataset is properly formatted and cleaned before training.
-* This example can serve as a template for binary classification tasks using decision trees.
-
----
-
+    
