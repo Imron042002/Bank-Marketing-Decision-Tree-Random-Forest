@@ -7,6 +7,11 @@
 This project applies machine learning techniques to a classification problem, following the **CRISP-DM** methodology. The goal is to train and evaluate a model that predicts a binary outcome using structured data.
 
 ---
+## Data Source Bank Marketing Dataset
+From :kaggle:Кравчук Анна
+About:To predict customer response to subscription offers for term deposit products
+Record Count :  45211rows × 21 columns
+---
 
 ## 1.  Business Understanding
 
