@@ -9,7 +9,8 @@ This project applies machine learning techniques to a classification problem, fo
 ---
 ## Data Source Bank Marketing Dataset
 
-* From :http://archive.ics.uci.edu/ml/datasets/Bank+Marketing#  Kaggle: https://www.kaggle.com/datasets/henriqueyamahata/bank-marketing/data
+* From :http://archive.ics.uci.edu/ml/datasets/Bank+Marketing#  
+ Kaggle: https://www.kaggle.com/datasets/henriqueyamahata/bank-marketing/data
 * About:To predict customer response to subscription offers for term deposit products
 * Record Count :  45211rows × 21 columns
 
